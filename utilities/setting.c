@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "headers/setting.h"
-
+#include "../headers/utiilites/setting.h"
+#include "../headers/global.h"
 
 
 /*save function*/
 void save(
-    int chess_board[8][8],
-    int out_pieces[8][4],
     int turn, 
     int out_rows_w, 
     int out_w, 
@@ -22,10 +20,10 @@ void save(
     int r4
     )
 {
-        //save the main board
+    //save the main board
     FILE* save_board; // file to save the data
     //check that the file exists
-    if((save_board = fopen("board_data.txt", "wb")) == NULL)
+    if((save_board = fopen(".board_data.bin", "wb")) == NULL)
     {
         printf("Cannot open file.\n");
     }
@@ -37,7 +35,7 @@ void save(
     //save the out pieces
     FILE* save_out; // file to save the data
     //check that the file exits
-    if((save_out = fopen("out_data.txt", "wb")) == NULL)
+    if((save_out = fopen(".out_data.bin", "wb")) == NULL)
     {
         printf("Cannot open file.\n");
     }
@@ -49,7 +47,7 @@ void save(
     //save the important numeric values in the code
     FILE* save_numericData;
      // open the file in write mode
-    save_numericData = fopen("nummericData.txt", "w");
+    save_numericData = fopen(".nummericData.bin", "wb");
     if (save_numericData == NULL)
     {
         printf("cannot open the file\n");
@@ -60,8 +58,6 @@ void save(
 
 
 void load(
-    int chess_board[8][8],
-    int out_pieces[8][4],
     int turn, 
     int out_rows_w, 
     int out_w, 
@@ -74,9 +70,9 @@ void load(
     int r3, 
     int r4
     )
-    {
-         FILE* load_board; // file to load the game
-    if((load_board = fopen("board_data.txt", "rb")) == NULL)//open the file and check if there any error
+{
+    FILE* load_board; // file to load the game
+    if((load_board = fopen(".board_data.bin", "rb")) == NULL)//open the file and check if there any error
     {
         printf("Cannot open file.\n");
     }
@@ -92,7 +88,7 @@ void load(
 
     //file to load the out pieces
     FILE* load_out; // file to load the data
-    if((load_out = fopen("out_data.txt", "rb")) == NULL) //open the file and check if there any error
+    if((load_out = fopen(".out_data.bin", "rb")) == NULL) //open the file and check if there any error
     {
         printf("Cannot open file.\n");
     }
@@ -108,7 +104,7 @@ void load(
     //load the numeric data
     FILE* load_numericData;
     // open the file in reading mode to read saved info
-    load_numericData = fopen("nummericData.txt", "r");
+    load_numericData = fopen(".nummericData.bin", "r");
 
     if (load_numericData == NULL) //in case there was any error while opening the file
     {
@@ -116,5 +112,4 @@ void load(
     }
     fscanf(load_numericData, "%d %d %d %d %d %d %d %d %d %d %d", &turn, &out_rows_w, &out_w, &out_rows_b, &out_b, &W_moved, &B_moved, &r1, &r2, &r3, &r4); //read the numeric values that was saved
     fclose(load_numericData); //close the file after reading the information from it
-
 }

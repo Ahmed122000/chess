@@ -7,8 +7,6 @@
 
 
 void save(
-    int chess_board[8][8],
-    int out_pieces[8][4],
     int turn, 
     int out_rows_w, 
     int out_w, 
@@ -24,8 +22,6 @@ void save(
 
 
 void load(
-    int chess_board[8][8],
-    int out_pieces[8][4],
     int turn, 
     int out_rows_w, 
     int out_w, 
