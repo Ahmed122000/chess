@@ -96,7 +96,7 @@ The project is organized as follows:
 
 ## Credits
 
-This project was developed by [Your Name](https://github.com/yourusername) as a personal project to practice C programming.
+This project was developed by [Eng: Ahmed Hesham](https://github.com/ahmed122000) & [Eng: Ayman Mohamed](https://github.com/Eng-Ayman-Mohamed)  as a project to practice C programming.
 
 ## License
 
