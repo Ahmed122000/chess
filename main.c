@@ -4,12 +4,11 @@
 
 #include "headers/global.h"
 #include "headers/pieces/pieces.h"
-#include "headers/utiilites/options.h"
-#include "headers/utiilites/setting.h"
-#include "headers/utiilites/board_controller.h"
+#include "headers/utilities/options.h"
+#include "headers/utilities/setting.h"
+#include "headers/utilities/board_controller.h"
 
 
-/*********************************************************main function***************************************************/
 int main()
 {
     while(save_2 == 1 && save_1 == 1)

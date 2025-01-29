@@ -1,5 +1,5 @@
 #include "../headers/global.h"
-#include "../headers/pieces/king.h"
+#include "../headers/pieces/pieces.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
