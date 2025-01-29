@@ -3,7 +3,8 @@
 #include <string.h>
 
 #include "../headers/global.h"
-#include "../headers/utiilites/options.h"
+#include "../headers/utilities/options.h"
+#include "../headers/utilities/delay.h"
 
 /*undo function*/
 void undo()

@@ -4,8 +4,8 @@
 
 #include "../headers/global.h"
 #include "../headers/pieces/pieces.h"
-#include "../headers/utiilites/delay.h"
-#include "../headers/utiilites/options.h"
+#include "../headers/utilities/delay.h"
+#include "../headers/utilities/options.h"
 
 /*print the chess board*/
 void print_chess_board()

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../headers/utiilites/setting.h"
+#include "../headers/utilities/setting.h"
 #include "../headers/global.h"
 
 

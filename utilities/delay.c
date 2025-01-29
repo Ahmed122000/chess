@@ -1,4 +1,4 @@
-#include "../headers/utiilites/delay.h"
+#include "../headers/utilities/delay.h"
 
 
 void delay(int d)
